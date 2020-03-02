@@ -14,7 +14,7 @@ namespace Prakt6_Kunin
     {
         readonly string alphabet = "__АБВГДЕЁЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ";
 
-        readonly string whorngalphabet = "_ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        readonly string wrongalphabet = "_ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         readonly int[] simple_numbers = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31,
                                                37, 41, 43, 47, 53, 59, 61, 67, 71, 73,
@@ -49,7 +49,8 @@ namespace Prakt6_Kunin
                 }
                 else
                 {
-                    Letter1_Label.Text = "Ошибка";
+                    index1 = wrongalphabet.IndexOf(letter1[0]);
+                    Letter1_Label.Text = "" + index1;
                 }
             }
         }
@@ -67,7 +68,8 @@ namespace Prakt6_Kunin
                 }
                 else
                 {
-                    Letter2_Label.Text = "Ошибка";
+                    index2 = wrongalphabet.IndexOf(letter2[0]);
+                    Letter2_Label.Text = "" + index2;
                 }
             }
         }
@@ -85,7 +87,8 @@ namespace Prakt6_Kunin
                 }
                 else
                 {
-                    Letter3_Label.Text = "Ошибка";
+                    index3 = wrongalphabet.IndexOf(letter3[0]);
+                    Letter3_Label.Text = "" + index3;
                 }
             }
         }
